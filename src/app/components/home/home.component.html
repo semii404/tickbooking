@@ -1,0 +1,39 @@
+<button class="button-33 " (click)="gencoach()">Reset data</button>
+<br>
+
+
+
+ <br>
+ Available Seats = {{totalavailbale}}
+ <br>
+ <br>
+ <br>
+
+
+
+
+
+
+
+<form #bookingForm="ngForm" (ngSubmit)="onSubmit(bookingForm)">
+  <div class="form-group">
+    Note:<span class="note"> enter number less than 8 only</span><br>
+    <label for="numberOfTickets">Number of Tickets:</label>
+    <input type="number" class="form-control" id="numberOfTickets" name="numberOfTickets" required min="1" max="7" [(ngModel)]="numberOfTickets">
+  </div>
+<br>
+  <button class="button-3" type="submit" [disabled]="!bookingForm.valid || totalavailbale == 0 || numberOfTickets > totalavailbale">book ticket</button>
+</form>
+
+
+
+<div class="container">
+  <ul class="tilesWrap" *ngIf="listshow"> 
+  
+    <li *ngFor="let val of bookedtick">
+   
+    
+      <span>Your Seat Number is :</span>
+      <h3>{{val}}</h3>
+  </li></ul>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tickbooking-26349": {
+      "hosting": {
+        "tickbook": [
+          "tickbooking-26349"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tickbooking-26349"
+  }
+}
